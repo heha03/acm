@@ -1,0 +1,6 @@
+ปนาชถเมทฯฐ
+while(low<=high)
+m=(low+high)/2;
+if(v<r[m])high=m-1;else low=m+1;
+
+return high+1

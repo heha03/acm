@@ -1,0 +1,11 @@
+vector:实现连续存储，支持随机访问，插入删除效率低下
+list:  非连续存储，双链表结构，支持插入删除，不支持随机访问
+deque: 合并了vector和list，但同时空间开销自然增大
+list常用函数:https://blog.csdn.net/fanyun_01/article/details/56881515
+insert,erase,sort
+-------------list还支持链表间的拼接操作splice--------------------
+void splice(iterator pos,list<T,Allocator>& x);
+void splice(iterator pos,list<T,Allocator>& x,iterator i);
+void splice(iterator pos,list<T,Allocator>& x,iterator first,iterator last);
+其实跟谁调用这个函数无关，将x的指定部分修改拼接到pos与pos-1之间的位置
+[first,last)
